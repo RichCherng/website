@@ -1,11 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './pages/home/App';
+import {
+  createBrowserRouter, RouterProvider
+} from 'react-router-dom';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <div></div>,
+    children: [
+      // {
+      //   path: "team",
+      //   element: <Team />,
+      // }
+    ]
+  }
+]);
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -18,7 +34,8 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <RouterProvider router={router} fallbackElement={<div></div>} />
     </div>
   );
 }
