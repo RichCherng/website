@@ -10,3 +10,6 @@ yarn create react-app my-app --template typescript
 
 ## Router
 https://reactrouter.com/en/main/routers/router-provider
+
+## Icon
+https://github.com/react-icons/react-icons

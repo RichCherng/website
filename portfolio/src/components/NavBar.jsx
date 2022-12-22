@@ -1,5 +1,6 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import linkedInIcon from '../resources/nav-icon1.svg';
+import gihubIcon from '../resources/github-icon.svg'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
@@ -21,11 +22,13 @@ const NavigationBar = ({ logo }) => {
                 </Nav>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
-                    <Nav.Link href="" ><img src={linkedInIcon} className="icon1" alt="logo" /></Nav.Link>
-                    <Nav.Link href="">GitHub</Nav.Link>
-                    <Navbar.Text>
-                        Rich Cherngchaosil
-                    </Navbar.Text>
+                    <Nav>
+                        <Nav.Link href="" ><img src={linkedInIcon} className="icon1" alt="logo" /></Nav.Link>
+                        <Nav.Link href=""><img src={gihubIcon} className="icon1" alt="logo" /></Nav.Link>
+                        <Navbar.Text>
+                            Rich Cherngchaosil
+                        </Navbar.Text>
+                    </Nav>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
