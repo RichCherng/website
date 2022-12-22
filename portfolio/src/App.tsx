@@ -4,11 +4,12 @@ import Home from './pages/home/App';
 import {
   createBrowserRouter, RouterProvider
 } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div></div>,
+    element: <Home />,
     children: [
       // {
       //   path: "team",
