@@ -4,6 +4,7 @@ import OffCanvas from "../../components/OffCanvas"
 import Board from "./Board"
 
 import './App.css'
+import { isShorthandPropertyAssignment } from "typescript";
 const SnakeGame = () => {
     const ref = useRef(null);
     const [state, setState] = useState({});
@@ -11,8 +12,32 @@ const SnakeGame = () => {
 
 
     useEffect(() => {
-        setState({...initState(ref)})
+        setState({...initState(ref)});
+        startGame();
+
+        return () => {
+            clearTimeout(state.timeoutId);
+        }
     }, [])
+    
+
+    const startGame = () => {
+        // game loop
+        loop();
+    }
+    
+    const loop = () => {
+        console.log("Loop")
+        let timeoutId = setTimeout(() => {
+            // move snake
+            // check collision
+            // check eat apple
+            
+            loop();
+        }, 1000) // 1 sec
+
+        this.setState({timeoutId})
+    }
 
     return (
         <Container id="GameBoard" >
