@@ -7,9 +7,11 @@ import {
     BrowserRouter as Router
 } from 'react-router-dom';
 
-const NavigationBar = ({ logo }) => {
+const NavigationBar = ({ logo, links }) => {
 
     const { img: logo_img } = logo;
+    const { linkedin: link_linkedIn, github: link_github } = links;
+    console.log(link_linkedIn)
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
@@ -23,8 +25,8 @@ const NavigationBar = ({ logo }) => {
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
-                        <Nav.Link href="" ><img src={linkedInIcon} className="icon1" alt="logo" /></Nav.Link>
-                        <Nav.Link href=""><img src={gihubIcon} className="icon1" alt="logo" /></Nav.Link>
+                        <Nav.Link href={link_linkedIn} ><img src={linkedInIcon} className="icon1" alt="logo" /></Nav.Link>
+                        <Nav.Link href={link_github}><img src={gihubIcon} className="icon1" alt="logo" /></Nav.Link>
                         <Navbar.Text>
                             Rich Cherngchaosil
                         </Navbar.Text>
