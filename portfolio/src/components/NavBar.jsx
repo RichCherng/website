@@ -11,7 +11,6 @@ const NavigationBar = ({ logo, links }) => {
 
     const { img: logo_img } = logo;
     const { linkedin: link_linkedIn, github: link_github } = links;
-    console.log(link_linkedIn)
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
